@@ -1,0 +1,19 @@
+# Secrets (Crucial - Never upload these)
+.env
+
+# Dependencies (Large folders that npm install will recreate)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor settings
+.vscode/
+.idea/
