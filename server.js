@@ -28,10 +28,11 @@ app.post('/api/chat', async (req, res) => {
         return res.status(400).json({ error: "No prompt provided" });
     }
 
-    const completion = await openai.chat.completions.create({
-     model: "google/gemini-2.5-flash",
-      messages: [{ role: "user", content: userPrompt }],
-    });
+   const completion = await openai.chat.completions.create({
+  model: "google/gemini-2.5-flash",
+  messages: [{ role: "user", content: userPrompt }],
+  max_tokens: 500
+});
 
     res.json({ reply: completion.choices[0].message.content });
   } catch (error) {
